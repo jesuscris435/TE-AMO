@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom right, #ffe0e9, #fff4f8);
+    overflow-x: hidden;
+  }
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  .intro, .mensaje, .carta, .despedida {
+    padding: 4rem 2rem;
+  }
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #d94c73;
+    margin-bottom: 1rem;
+  }
+  p {
+    max-width: 700px;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  nav {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: #fff0f5;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #d94c73;
+    font-weight: bold;
+  }
+  .flores, .corazones {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .flores span, .corazones span {
+    position: absolute;
+    display: block;
+    animation: flotar 10s linear infinite;
+    color: #ffb6c1;
+    font-size: 2rem;
+    opacity: 0.7;
+  }
+  @keyframes flotar {
+    0% {transform: translateY(100vh); opacity: 0;}
+    100% {transform: translateY(-10vh); opacity: 1;}
+  }
+  audio {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    h1, h2 { font-size: 2rem; }
+    p { font-size: 1rem; padding: 0 1rem; }
+    nav a { margin: 0 0.5rem; font-size: 0.9rem; }
+  }
